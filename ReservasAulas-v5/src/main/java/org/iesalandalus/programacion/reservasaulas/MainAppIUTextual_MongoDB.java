@@ -4,12 +4,12 @@ import org.iesalandalus.programacion.reservasaulas.controlador.ControladorReserv
 
 import org.iesalandalus.programacion.reservasaulas.controlador.IControladorReservasAulas;
 import org.iesalandalus.programacion.reservasaulas.modelo.IModeloReservasAulas;
-import org.iesalandalus.programacion.reservasaulas.modelo.ficheros.ModeloReservasAulas;
+import org.iesalandalus.programacion.reservasaulas.modelo.mongodb.ModeloReservasAulas;
 import org.iesalandalus.programacion.reservasaulas.vista.IVistaReservasAulas;
 import org.iesalandalus.programacion.reservasaulas.vista.iutextual.Consola;
 import org.iesalandalus.programacion.reservasaulas.vista.iutextual.VistaReservasAulas;
 
-public class MainApp {
+public class MainAppIUTextual_MongoDB {
 
 	public static void main(String[] args) {
 		Consola.mostrarCabecera("Programa para la gestión de reservas de aulas del IES Al-Ándalus");

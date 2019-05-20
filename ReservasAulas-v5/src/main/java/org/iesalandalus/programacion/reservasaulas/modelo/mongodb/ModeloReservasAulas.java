@@ -1,12 +1,18 @@
-package org.iesalandalus.programacion.reservasaulas.modelo;
+package org.iesalandalus.programacion.reservasaulas.modelo.mongodb;
 
 import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.reservasaulas.modelo.dao.*;
-import org.iesalandalus.programacion.reservasaulas.modelo.dominio.*;
+import org.iesalandalus.programacion.reservasaulas.modelo.IModeloReservasAulas;
+import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Aula;
+import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Profesor;
+import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Reserva;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.permanencia.Permanencia;
+import org.iesalandalus.programacion.reservasaulas.modelo.mongodb.dao.Aulas;
+import org.iesalandalus.programacion.reservasaulas.modelo.mongodb.dao.Profesores;
+import org.iesalandalus.programacion.reservasaulas.modelo.mongodb.dao.Reservas;
+import org.iesalandalus.programacion.reservasaulas.modelo.mongodb.utilidades.MongoDB;
 
 public class ModeloReservasAulas implements IModeloReservasAulas {
 
@@ -155,12 +161,12 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	}
 
 	@Override
-	public void leerReservas() {
-		reservas.leer();
+	public void comenzar() {
+		MongoDB.establecerConexion();
 	}
 
 	@Override
-	public void escribirReservas() {
-		reservas.escribir();
+	public void terminar() {
+		MongoDB.cerrarCliente();;
 	}
 }
