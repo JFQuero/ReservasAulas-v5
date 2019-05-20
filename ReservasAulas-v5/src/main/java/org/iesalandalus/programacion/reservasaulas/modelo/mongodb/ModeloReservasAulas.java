@@ -58,16 +58,6 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 		aulas.borrar(aula);
 	}
 
-	@Override
-	public void leerAulas() {
-		aulas.leer();
-	}
-
-	@Override
-	public void escribirAulas() {
-		aulas.escribir();
-	}
-
 	/* Metodos para Profesores */
 	@Override
 	public List<Profesor> getProfesores() {
@@ -167,6 +157,8 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 
 	@Override
 	public void terminar() {
-		MongoDB.cerrarCliente();;
+		MongoDB.cerrarCliente();
 	}
+
+
 }

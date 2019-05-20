@@ -24,10 +24,6 @@ public interface IModeloReservasAulas {
 
 	void borrarAula(Aula aula) throws OperationNotSupportedException;
 
-	void leerAulas();
-
-	void escribirAulas();
-
 	/* Metodos para Profesores */
 	List<Profesor> getProfesores();
 
