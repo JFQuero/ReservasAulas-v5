@@ -89,16 +89,6 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 		profesores.borrar(profesor);
 	}
 
-	@Override
-	public void leerProfesores() {
-		profesores.leer();
-	}
-
-	@Override
-	public void escribirProfesores() {
-		profesores.escribir();
-	}
-
 	/* Metodos para Reservas */
 	@Override
 	public List<Reserva> getReservas() {

@@ -96,12 +96,10 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 		profesores.borrar(profesor);
 	}
 
-	@Override
 	public void leerProfesores() {
 		profesores.leer();
 	}
 
-	@Override
 	public void escribirProfesores() {
 		profesores.escribir();
 	}
